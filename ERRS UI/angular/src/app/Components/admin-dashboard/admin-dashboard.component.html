@@ -1,0 +1,37 @@
+<body>
+  <div class="left">
+    <img src="assets/bytestrone-logo-white.svg" class="image" alt="Bytestrone logo" />
+    <nav class="left-side">
+      <a routerLink="/admin">Home</a>
+      <br /><br />
+      <a routerLink="rewards">Rewards</a>
+      <br><br>
+
+      <a routerLink="admin-product">Products</a>
+      <br /><br />
+      <a routerLink="point">Point Allocation</a>
+      <br /><br />
+      <a routerLink="employee-status">EmployeeApproval</a>
+      <br><br>
+
+      <a routerLink="transaction-history">TransactionHistory</a>
+      <br><br>
+      <div class="signout">
+        <button routerLink="/">Signout</button>
+        <!-- <a routerLink="/" (click)="signout()">Signout</a> -->
+
+      </div>
+
+    </nav>
+    <div class="btm-quote">
+      Experience Engineering Excellence
+    </div>
+
+  </div>
+
+  <div class="right">
+
+    <router-outlet></router-outlet>
+      </div>
+
+    </body>

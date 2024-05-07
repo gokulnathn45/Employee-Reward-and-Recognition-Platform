@@ -1,0 +1,30 @@
+<div mat-dialog-title>
+  <h1>Reward</h1>
+</div>
+<form [formGroup]="RewardForm" (ngSubmit)="OnFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Reward Name</mat-label>
+        <input matInput type="text" placeholder="Enter Reward Name" formControlName="rewardName">
+        <mat-error *ngIf="submitted && RewardForm.get('rewardName')?.hasError('required')">RewardName
+          required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Points</mat-label>
+        <input matInput type="number" placeholder="Points Allocated" formControlName="points">
+        <mat-error *ngIf="submitted && RewardForm.get('points')?.hasError('required')">Points required</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description</mat-label>
+        <input matInput type="text" placeholder="Enter details" formControlName="description">
+        <mat-error *ngIf="submitted && RewardForm.get('description')?.hasError('required')">Description
+          required</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update' : 'Save'}}</button>
+  </div>
+</form>

@@ -1,0 +1,74 @@
+
+<div class="main">
+  
+  <div class="image">
+    <img src="assets\WhatsApp Image 2024-04-24 at 12.37.27 PM.jpeg" alt="image not found">
+    <label class="welcome">Welcome</label>
+    <div class="fullname">{{firstName}} {{lastName}}</div>
+    <label class="emp-count">Employee Count : {{numberofemployees}}</label>
+    
+
+  </div>
+  <div class="dashboard">
+    <div class="first">
+  <h3>Product History</h3>
+  <div class="pdt-history">
+    
+      <div class="table">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Product</th>
+          </tr>
+          <tr *ngFor="let product of topThreeTransactions; let i = index">
+            <td>{{product.firstName}}</td>
+            <td>{{product.productName}}</td>
+          </tr>
+        </table>
+        </div>
+  </div>
+</div>
+<div class="second">
+<h3>Recent Reward History</h3>
+  <div class="top-performance">
+    <div class="table">
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>RewardName</th>
+          <th>Point</th>
+        </tr>
+        <tr *ngFor="let user of topThreeRewards">
+          <td>{{user.firstName}}</td>
+          <td>{{user.rewardName}}</td>
+          <td>{{user.points}}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  </div>
+  <div class="third">
+  <h3>Top Perfomers</h3>
+  <div class="awd-history">
+    <div class="table">
+      <table>
+        <tr>
+          <th>Position</th>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+        <tr *ngFor="let user of topThreeUsers; let i = index">
+          <td>{{i+1}}</td>
+          <td>{{user.firstName}}</td>
+          <td>{{user.pointsGained}}</td>
+        </tr>
+
+        <tr></tr>
+      </table>
+    </div>
+
+  </div>
+</div>
+ 
+</div>

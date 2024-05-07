@@ -1,0 +1,49 @@
+<div>
+  <img
+    src="assets\wallpaperflare.com_wallpaper (6).jpg"
+    class="background-image"
+    alt="image not found"
+  />
+  <h1 class="login-heading">Employee Reward and Recognition Platform</h1>
+  <form [formGroup]="signupForm">
+    <div class="signup-box">
+      <h2 class="signup">Signup</h2>
+      <div class="firstname-box"><label class="first-name">Firstname </label>
+        <input type="text" class="signup-contents" formControlName="firstName"  [ngClass]="{ 'is-invalid': submitted && signupFunction['firstName'].errors }" />
+        <div *ngIf="submitted && signupFunction['firstName'].errors" class="invalid-feedback">
+          <div *ngIf="signupFunction['firstName'].errors['required']">FirstName is required</div>
+        </div></div>
+      
+        <div class="lastname-box"><label class="last-name">Lastname </label>
+          <input type="text" class="signup-contents" formControlName="lastName"  [ngClass]="{ 'is-invalid': submitted && signupFunction['lastName'].errors }"/>
+          <div *ngIf="submitted && signupFunction['lastName'].errors" class="invalid-feedback">
+            <div *ngIf="signupFunction['lastName'].errors['required']">LastName is required</div>
+          </div></div>
+      
+      
+<div class="username-box"><label class="Username">Username </label>
+  <input type="text" class="signup-contents" formControlName="userName"  [ngClass]="{ 'is-invalid': submitted && signupFunction['userName'].errors }"/>
+  <div *ngIf="submitted && signupFunction['userName'].errors" class="invalid-feedback">
+    <div *ngIf="signupFunction['userName'].errors['required']">Username is required</div>
+  </div></div>
+  <div class="password-box">  <label class="Password">Password </label>
+    <input
+      type="password"
+      class="signup-contents"
+      formControlName="password"
+      [ngClass]="{ 'is-invalid': submitted && signupFunction['password'].errors }"
+    />
+    <div *ngIf="submitted && signupFunction['password'].errors" class="invalid-feedback">
+      <div *ngIf="signupFunction['password'].errors['required']">Password is required</div>
+    </div></div>
+      
+      
+    
+      <label class="alreadyaccnt">Already have account?</label>
+      &nbsp;
+      <a id="login" routerLink="/">Login</a>
+      
+      <input type="submit" class="signup-submit" (click)="Onsignup()" />
+    </div>
+  </form>
+</div>

@@ -1,0 +1,36 @@
+
+       
+        <form [formGroup]="rewardForm">
+        <div class="product">
+          
+         
+          <div class="addproduct">
+            <input type="text" placeholder="  ProductName" class="productname" formControlName="productName"  />
+            &nbsp;&nbsp;
+  
+            <label>Category:</label>
+            <select class="productname" formControlName="category">
+              <option value="Electronics">Electronics</option>
+              <option value="Apparels">Apparels</option>
+              <option value="Giftcard">Giftcard</option>
+            </select>
+  
+            <input
+              type="text"
+              placeholder="  Manufacturer"
+              class="manufacturer" formControlName="manufacturer" /><br />
+
+            <br />
+            <br />
+            <input type="number" placeholder="Quantity" formControlName="quantity" />&nbsp;&nbsp;
+  
+            <input type="number" placeholder="BytesValue" formControlName="bytesValue" />
+            <br />
+            <br />
+            <input type="file" (change)="onSelectFile($event)" formControlName="productImage"/>
+            <br>
+            <br />
+            <input type="submit" (click)="save()" value="Save" />
+          </div>
+          </div>
+        </form>

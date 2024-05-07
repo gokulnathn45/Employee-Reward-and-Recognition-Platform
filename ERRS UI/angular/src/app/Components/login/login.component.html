@@ -1,0 +1,32 @@
+<div>
+  <img src="assets\wallpaperflare.com_wallpaper (6).jpg" class="background-image" alt="image not found" />
+  <h1 class="login-heading">Employee Reward and Recognition Platform</h1>
+
+  <form [formGroup]="loginForm">
+    <div class="login-first">
+      <h2 class="login">Login</h2>
+      <div class="user">
+        <label class="user-label">Username:</label>
+        <input type="text" placeholder="Enter your Username" class="user-login" formControlName="username"
+          [ngClass]="{ 'is-invalid': submitted && loginfunction['username'].errors }" />
+        <div *ngIf="submitted && loginfunction['username'].errors" class="invalid-feedback">
+          <div *ngIf="loginfunction['username'].errors['required']">User Name is required</div>
+        </div>
+      </div>
+      <div class="password">
+        <label class="user-label">Password:</label>
+        <input type="password" placeholder="Enter Password" class="user-password" formControlName="password"
+          [ngClass]="{ 'is-invalid': submitted && loginfunction['password'].errors }" />
+        <div *ngIf="submitted && loginfunction['password'].errors" class="invalid-feedback">
+          <div *ngIf="loginfunction['password'].errors['required']">Password is required</div>
+        </div>
+      </div>
+
+      <label class="label-notreg">Not Registered?</label><a id="signup" routerLink="/signup">Signup</a>
+
+      <br /><br />
+      <input type="submit" (click)="onlogin()" type="submit" value="Login" class="login-submit" />
+      <br />
+    </div>
+  </form>
+</div>

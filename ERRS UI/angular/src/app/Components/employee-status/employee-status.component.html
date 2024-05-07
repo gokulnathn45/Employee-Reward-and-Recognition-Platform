@@ -1,0 +1,60 @@
+<div class="employee-status">
+<mat-toolbar>
+
+  <span>EmployeeApproval</span>
+  <span class="example-spacer"></span>
+
+</mat-toolbar>
+<div class="filter">
+
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" #input>
+  </mat-form-field>
+</div>
+
+<div class="mat-elevation-z8">
+
+  <table mat-table [dataSource]="dataSource" matSort>
+
+
+
+   <ng-container matColumnDef="firstName">
+
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> FirstName </th>
+      <td mat-cell *matCellDef="let row"> {{row.firstName}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="lastName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Lastname </th>
+      <td mat-cell *matCellDef="let row"> {{row.lastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="loginStatus">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> LoginStatus </th>
+      <td mat-cell *matCellDef="let row"> {{row.loginStatus}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="activity">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
+      <td mat-cell *matCellDef="let row">
+        <button mat-raised-button (click)="Approveuser(row.id)">Approve </button>&nbsp;&nbsp;
+        <button mat-raised-button color="warn" (click)="rejectuser(row.id)">Reject</button>
+        <app-dialog-box *ngIf="showDialogueApprove" [message]="dialogMessage" (confirm)="onDialogueApprove(row.id)" (cancel)="onDialogueApproveCancel()"></app-dialog-box>
+        <app-dialog-box *ngIf="showDialogue" [message]="dialogMessage" (confirm)="onDialogueReject(row.id)" (cancel)="onDialogueRejectCancel()"></app-dialog-box>
+      </td>
+     
+
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr> 
+  </table>
+</div>
+
+<mat-paginator [pageSizeOptions]="[3, 5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+</div>

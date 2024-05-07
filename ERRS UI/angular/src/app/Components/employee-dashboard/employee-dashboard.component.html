@@ -1,0 +1,28 @@
+
+  <body>
+    <div class="left">
+      <img
+        src="assets/bytestrone-logo-white.svg"
+        class="image"
+        alt="Bytestrone logo"
+      />
+      <nav class="left-side">
+        <br /><a routerLink="/employee">Home</a> <br /><br />
+        <a routerLink="product">Products</a>
+        <br /><br />
+        <a routerLink="employee-transaction">History</a>
+        <br><br>
+        <div class="signout">
+          <button routerLink="/">Signout</button>
+        </div>
+        <!-- <a routerLink="/"(click)="signout()">Sign out</a> -->
+      </nav>
+      <div class="btm-quote">
+      Experience Engineering Excellence
+    </div>
+    </div>
+    <div class="right">
+     
+        <router-outlet></router-outlet>
+    </div>
+    </body>

@@ -1,0 +1,86 @@
+.background-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+}
+.login-heading {
+  margin-left: 46%;
+  margin-top: -50%;
+  color: rgb(110, 132, 244);
+  position: relative;
+}
+.signup-box {
+  margin-left: 60%;
+
+  padding: 10px;
+  border: none;
+  width: 30%;
+  height: 350px;
+  border: 1px solid black;
+  background-color: grey;
+
+  position: relative;
+}
+.signup {
+  color: rgb(10, 238, 10);
+  margin-left: 40%;
+}
+.first-name {
+  color: white;
+  margin-right: 10%;
+}
+.firstname-box
+{
+  margin-bottom: 12px;
+}
+.last-name {
+  color: white;
+  margin-right: 10%;
+}
+.lastname-box
+{
+  margin-bottom: 12px;
+}
+.email {
+  color: white;
+  margin-right: 18%;
+}
+.user-type {
+  color: white;
+  margin-right: 10%;
+}
+.Username {
+  color: white;
+  margin-right: 9%;
+}
+.username-box
+{
+  margin-bottom: 12px;
+}
+.Password {
+  color: white;
+  margin-right: 10%;
+}
+.password-box
+{
+  margin-bottom: 12px;
+}
+.signup-contents {
+  width: 60%;
+  height: 7%;
+}
+.alreadyaccnt {
+  color: white;
+}
+.signup-submit {
+  margin-left: 45%;
+}
+.invalid-feedback
+{
+  color: red;
+}

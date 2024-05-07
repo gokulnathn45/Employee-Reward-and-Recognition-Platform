@@ -1,0 +1,64 @@
+.background-image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-size: contain;
+  }
+}
+.login-heading {
+  margin-left: 46%;
+  margin-top: -50%;
+  color: rgb(110, 132, 244);
+  position: relative;
+}
+.login-first {
+  margin-left: 70%;
+
+  padding: 10px;
+  border: none;
+  width: 25%;
+  height: 300px;
+  border: 1px solid black;
+  background-color: grey;
+
+  position: relative;
+}
+.login {
+  color: rgb(10, 238, 10);
+  padding-left: 40%;
+}
+.user-login {
+  padding: 7px;
+  margin-left: 20px;
+}
+.user-label {
+  color: white;
+}
+.user-password {
+  padding: 7px;
+  margin-left: 26px;
+}
+.login-submit {
+  margin-left: 45%;
+}
+.label-notreg {
+  color: white;
+  margin-right: 10px;
+}
+.login-signup {
+  margin-left: 60%;
+  margin-top: 5px;
+}
+.user{
+  margin-bottom: 20px;
+}
+.password{
+  margin-bottom: 20px;
+}
+.invalid-feedback
+{
+  color: red;
+}

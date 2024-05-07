@@ -1,0 +1,29 @@
+.example-additional-selection {
+    opacity: 0.75;
+    font-size: 0.75em;
+  }
+.row
+{
+    display: flex;
+    gap: 10px;
+
+}
+.content
+{
+    padding-top: 10px;
+
+}
+mat-form-field
+{
+    width: 1 00%;
+}
+button
+{
+    flex: 1;
+}
+button.example-custom-date-class {
+    background: orange;
+    border-radius: 100%;}
+.elected-points{
+    width: 50px;
+}
